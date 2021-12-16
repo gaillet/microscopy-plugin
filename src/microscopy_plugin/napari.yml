@@ -1,0 +1,11 @@
+name: microscopy-plugin
+display_name: Microscopy plugin
+contributions:
+  commands:
+    - id: microscopy-plugin.get_reader
+      python_name: microscopy_plugin._reader:napari_get_reader
+      title: Open data with Microscopy plugin  
+  readers:
+    - command: microscopy-plugin.get_reader
+      accepts_directories: false
+      filename_patterns: ['*.npy']  
